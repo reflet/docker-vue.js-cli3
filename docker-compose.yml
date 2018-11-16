@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    build: .
+    image: my/web
+    container_name: 'web'
+    ports:
+      - '80:8080'
+    volumes:
+      - ./src:/app
+
