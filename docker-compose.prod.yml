@@ -1,10 +1,10 @@
 version: '2'
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
     image: my/web
     container_name: 'web'
     ports:
-      - '80:8080'
-    volumes:
-      - ./src:/app
+      - '80:80'
